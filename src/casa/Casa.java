@@ -6,7 +6,7 @@ public class Casa {
 
 	public static void main(String[] args) {
 
-		int res = 0;
+		int res = 0, res2 = 0;
 		double lar = 0, com = 0, to = 0, tol = 0;
 		String nome, respo;
 		Scanner ler = new Scanner(System.in);
@@ -27,14 +27,21 @@ public class Casa {
 			System.out.print("vc deseja adicionar mais cômodos?(S/N) ");
 			System.out.println("");
 			respo = ler.next();
+			res2 = 0;
 
+			while (res2 == 0) 
+				
 				if (respo.equals("S")|| respo.equals("s")) {
 					res= 0;
+					res2++;
 				} else if (respo.equals("N")|| respo.equals("n")) {
 					res++;
+					res2++;
 				} else {
 					System.out.println("Insira S ou N ");
 					res = 0;
+					res2 = 0;
+					respo = ler.next();
 				}
 			
 
